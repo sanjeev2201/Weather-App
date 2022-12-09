@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Weather.apps.WeatherConfig'
 ]
 
 MIDDLEWARE = [
@@ -73,11 +74,17 @@ WSGI_APPLICATION = 'My_Weather_Webapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+#add mysql database replace to sqlite3
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'dec_project_2',
+		'USER': 'root',
+		'PASSWORD': 'Rajeshray02@',
+		'HOST':'localhost',
+		'PORT':'3306',
+	}
 }
 
 
